@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head section -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>@yield('title') | Our Universe</title>
+        <!-- Favicons-->
+        <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+        <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+        <title>Universe Blog </title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Materialize core CSS -->
+        <link href="./public/css/materialize.css" rel="stylesheet">
+        <link href="{{ asset('/css/materialize.css') }}" rel="stylesheet"> 
+        <!-- parsley form validation css -->
+        <link href="{{ asset('/vendors/parsley/css/parsley.css') }}" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link href="./public/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <!-- nav section -->
+        <!-- start main section -->
+        <header>
+            <div class="section" style="padding-top: 0px;">
+                <nav class="nav">
+                    <div class="nav-wrapper"> 
+                        <a href="/" class="brand-logo">Our Universe</a> 
+                        <ul id="nav-mobile" class="right hide-on-med-and-down"> 
+                            <li>
+                                <a href="/about">About</a>
+                            </li>                             
+                            <li>
+                                <a href="/contact">Contact</a>
+                            </li>                             
+                            <li> 
+                                <a class="dropdown-button" href="#!" data-activates="dropdown1">Posts<i class="material-icons right">arrow_drop_down</i> </a>
+                                <ul id="dropdown1" class="dropdown-content"> 
+                                    <li>
+                                        <a href="/blog">View</a>
+                                    </li>                                     
+                                    <li>
+                                        <a href="/posts/create">Create</a>
+                                    </li>                                     
+                                </ul>                                 
+                            </li>                             
+                        </ul>                         
+                    </div>                     
+                </nav>                 
+            </div>
+        </header>
+        <div class="page-container">
+            <!-- hero section -->
+            <!-- main content -->
+            <div class="slider">
+                <ul class="slides">
+                    <li> 
+                        <!-- random image -->
+                        <img src="http://blog.dev/images/slide1.jpg" alt="Image" />
+                        <div class="caption left-align">
+                            <h1>Left Aligned Caption</h1>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://blog.dev/images/slide2.jpg" alt="Image" /> 
+                        <!-- random image -->
+                        <div class="caption center-align">
+                            <h1>This is our big Tagline!</h1>
+                            <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://blog.dev/images/slide3.jpg" alt="Image" /> 
+                        <!-- random image -->
+                        <div class="caption right-align">
+                            <h1 class="light grey-text text-dark-2">This is our big Tagline!</h1>
+                            <h5 class="light grey-text text-dark-1">Here's our small slogan.</h5>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="section #e0f2f1 teal lighten-5" id="section1">
+                <div class="stl-col-8 stl-pad-40">
+                    <h2 class="section_heading">Leopards</h2> 
+                    <div>
+                        <b>
+    The leopard (Panthera pardus)</b> is a member of the Felidae family and the smallest of the four "big cats," the other three being the tiger, lion and jaguar. There are nine recognized subspecies of leopard. All subspecies except the African leopard can be found in Asia, South Asia, and India.
+                        <br>
+                        <b>Diet</b>
+                        <br>Leopards eat small hoofstock such as gazelle, impala, deer and wildebeast. On occasion, they may also hunt monkeys, rodents and birds. They often bring their prey up into the branches of a tree to eat it and protect it from other predators and scavengers.
+                        Range
+                        Did You Know?
+                        Leopards are very agile, and can run at over 36 miles per hour, leap over 20 feet and jump up to 10 feet.
+                        Leopards are found throughout most of Africa and Asia from the middle east to the Soviet Union, Korea, China, India, and Malaysia. Leopards live in a variety of habitats including forests, mountains, grassland and deserts.
+                        <br>
+                        <b>Behavior</b>
+                        <br>Leopards are nocturnal animals, meaning they are active at night. During the day, they rest in thick brush or in trees. Leopards are solitary, preferring to live alone. They are very agile and good swimmers. They are able to leap more than 20 feet.
+                        Reproduction
+                        Following a 90 - 105 day gestation, one to six kittens are born.
+                    </div>                     
+                </div>
+                <div class="stl-col-4">
+                    <img src="https://www.omicsonline.org/journal-highlight-images/diseases-companion-and-wild-animals.jpg" class="stl-image-4" /> 
+                </div>                 
+            </div>
+            <div class="section #fff3e0 orange lighten-5" id="section2">
+                <div class="stl-col-4">
+                    <img src="http://r.ddmcdn.com/s_f/o_1/cx_297/cy_0/cw_1201/ch_1201/w_720/APL/uploads/2014/08/wild-animal-safari-zebra-5371037.jpg" class="stl-image-4" /> 
+                </div>
+                <div class="stl-col-8 stl-pad-40">
+                    <h2 class="section_heading">Zebras</h2> 
+                    <div>
+                        Closely related to horses and donkeys, 
+                        <b>the zebra (subgenuses Hippotigris and Dolichohippus)</b> is best known for its black and white striped body. In fact, zebra stripe patterns are unique to each individual. These stripes are believed to be camouflage devices that help zebras hide well in the grass.
+                        Zebra, 
+                        <br>
+                        <b>Diet</b>
+                        <br>Zebras are herbivorous and primarily eat a variety of grasses. They are also known to eat shrubs, herbs, twigs, leaves and bark.
+                        Population
+                        Overall, plains zebras number at around 750,000. Historically, there were over 15,000 Grevy's zebras. However, there are only about 2,500 remaining today. There are 600-700 cape mountain zebras and around 800-1300 Hartmann's mountain zebras in the wild.
+                        <br>
+                        <b>Range</b>&nbsp;
+                        <br>Plains zebra are found on the savannas from Sudan to northern Zimbabwe in eastern Africa. Grevy's zebras are now mostly restricted to parts of northern Kenya. Mountain zebras occur in southwestern Africa with cape mountain zebras in South Africa and Hartmann's mountain zebras in Namibia and Angola.
+                        Behavior
+                        Zebras as very social animals and live in large groups called 'harems.' Plains and mountain zebras live in harems that are made up of one stallion and up to six mares and their young, while Grevy's zebras come together as groups for short periods of time. Sometimes herds come together to form temporary&nbsp;
+                    </div>                     
+                </div>                 
+            </div>
+            <!-- footer section -->
+        </div>
+        <footer class="page-footer nav-color"> 
+            <div class="container" style="padding-left: 2.5%; padding-right: 2.5%;"> 
+                <div class="row"> 
+                    <div class="col l6 s12"> 
+                        <h5 class="white-text">Footer Content</h5> 
+                        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p> 
+                    </div>                     
+                    <div class="col l4 offset-l2 s12"> 
+                        <h5 class="white-text">Links</h5> 
+                        <ul> 
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+                            </li>                             
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">Link 2</a>
+                            </li>                             
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">Link 3</a>
+                            </li>                             
+                            <li>
+                                <a class="grey-text text-lighten-3" href="#!">Link 4</a>
+                            </li>                             
+                        </ul>                         
+                    </div>                     
+                </div>                 
+            </div>             
+            <div class="footer-copyright"> 
+                <div class="container" style="padding-left: 2.5%; padding-right: 2.5%;">                            © 2014 Copyright Text                            
+                    <a class="grey-text text-lighten-4 right" href="#!">More Links</a> 
+                </div>                 
+            </div>             
+        </footer>         
+        <!-- end main content -->
+        <!-- scripts -->
+        <script src="{{ asset('js/jquery-3.2.1.js') }}"></script>
+        <script src="./public/js/jquery-3.2.1.js"></script>
+        <script src="{{ asset('js/materialize.js') }}"></script>
+        <script src="./public/js/materialize.js"></script>         
+        <!-- parsley form validation JavaScript -->
+        <script src="{{ asset('vendors/parsley/js/parsley.min.js') }}"></script>
+        <script src="./public/vendors/parsley/js/parsley.min.js"></script>
+        <!-- pickadate JavaScript -->
+        <script src="{{ asset('vendors/pickadate/picker.date.js') }}"></script>
+        <script src="./public/vendors/pickadate/picker.date.js"></script>
+        <script src="{{ asset('vendors/pickadate/picker.js') }}"></script>
+        <script src="./public/vendors/pickadate/picker.js"></script>
+        <script src="{{ asset('vendors/pickadate/legacy.js') }}"></script>
+        <script src="./public/vendors/pickadate/legacy.js"></script>
+        <script type="text/javascript">
+  $(function() {
+    $('#datepicker').pickadate({
+        formatSubmit: 'yyyy-mm-dd',
+        hiddenName: true,
+        format: 'yyyy-mm-dd',
+      editable: undefined
+    })
+  });
+</script>
+        <!-- slider JavaScript  -->
+        <script>
+$(document).ready(function(){
+  $('.slider').slider({
+    full_width: false,
+    interval:10000,
+    transition:1000
+    });
+});
+</script>
+        <script src="index.js"></script>
+    </body>
+</html>

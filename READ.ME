@@ -1,0 +1,253 @@
+READ.ME
+/*******************************************/
+/* Instructions to create a system in Laravel 
+/* presumes that Laravel and Valet are already
+/* installed.
+/*******************************************/
+
+// create the larvel scaffold
+
+>laravel new blog 
+
+// serve the blog  (localhost:8000)
+
+>cd blog
+>php artisan serve
+
+// test that the home page is routing
+
+localhost:8000 // in browser
+
+// better yet, start valet and park the directory
+
+>cd /Users/rayjnorris/Dropbox/projects/Laravel    (stop short of blog directory)
+>valet start
+>valet park
+
+// test that we get home page
+
+blog.dev  // in browser 
+
+// prepare to create models, migrate to database, route to views
+
+// create blog database
+
+>mysql -uroot -p    // press enter for no password set or enter password
+>create database blog;   // if one already exists then drop database blog;
+
+// update the .env file to connect to database so migrations will know how to connect
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=blog
+DB_USERNAME=root
+DB_PASSWORD=
+
+// migrate base tables that are included in Laravel
+
+> php artisan migrate
+
+// view the tables
+
+>mysql -uroot -p
+>use blog;
+>show tables; 
+
+// database/migrations are in place now and can be viewed in sublime
+
+/**********************************************************************?
+/* we have blog database, so let's create 
+/* a posts model (posts table in database), and seed the table
+/***********************************************************************
+
+// create the migration to create_posts_table and stub in table up
+
+>composer dump-autoload // this is needed if the following command croaks
+>php artisan make:migration create_posts_table --create=posts
+
+// fill in the migration just created using sublime
+
+public function up()
+    {
+        Schema::create('posts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('post_author');  <-- added this
+            $table->string('post_title');  <-- added this
+            $table->date('post_date');  <-- added this
+            $table->text('post_content');  <-- added this
+            $table->timestamps();
+        });
+    }
+
+// migrate the database
+
+>php artisan migrate
+
+// should see the table now with the model defined - check it out.  if there is any mistake 
+// in the model (tables created) fix the migration file and then run - this will roll back all 
+// migrations, then rerun the new migration set - note, that a refresh will delete contents of tables
+// so if you want contents, then use seeds
+
+>php artisan migrate:refresh
+
+/***********************************************************************************/
+/* create seeder file, added seeds to table, hook new seeder file to database seeder
+/* and rerun migration to seed tables
+/***********************************************************************************/
+
+>php artisan make:seeder PostsTableSeeder
+
+// notice "PostsTableSeeder" file in /database/seeds
+// edit 'PostsTableSeeder' as follows
+
+ public function run()
+    {
+        DB::table('posts')->insert([
+            'post_author'   => 'Ray J. Norris',
+            'post_date'		=> '2017-04-12',
+            'post_title'    => 'Post Title 1',
+            'post_content'  => 'Laravel includes a simple method of seeding your database with test data using seed classes. All seed classes are stored in the database/seeds directory. Seed classes may have any name you wish, but probably should follow some sensible convention, such as UsersTableSeeder, etc. By default, a DatabaseSeeder class is defined for you. From this class, you may use the  call method to run other seed classes, allowing you to control the seeding order.',
+        ]);  //
+    }
+
+// add seeder to the DatabaseSeeder.php file
+
+public function run()
+    {
+        $this->call(PostsTableSeeder::class);  <-- add this line for every seeder 
+    }
+
+// rerun migration, but this time include --seed option
+
+>php artisan migrate:refresh --seed  
+
+// make sure seeds are working in database tables ... 
+
+/*****************************************************************************/
+/* create a model (post) and then route to the index view of all posts
+/* we need an app (post), two routes and blades - one that displays all records and includes
+/* links to the single record record and blade
+/****************************************************************************
+
+// create model for post
+
+> php artisan make:model Post  (this is so I can use model method of referencing data)
+
+// notice that we now have /app/Post.php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;  <-- extends the model providing active record
+
+class Post extends Model
+{
+    //
+}
+
+// create the route in web.php
+
+Route::get('/posts', function () {
+
+    $posts = App\Post::all();  <-- using the model class all() method
+
+    /*dd($posts);*/
+
+    return view('posts.index', compact('posts'));  <-- passing posts array to /posts/index.blade.php
+		
+
+});
+
+// create /posts/index.blade.php view
+
+<h1 class="title" style="margin-top: 100px;">Posts</h1>
+<ul style="padding-left: 0px; list-style-type: none;">
+    @foreach($posts as $post)
+    <li>
+        <a href="/posts/{{$post->id}}"><h4>{{$post->post_title}}</h4></a>
+    </li>
+    @endforeach     
+</ul>
+
+/******************************************************************
+// finally, create the route and show blade for individual posts
+/******************************************************************
+
+// create route
+
+Route::get('/posts/{post}', function($id){
+
+	$post = App\Post::find($id);
+
+	/*dd($post);*/
+
+    return view('posts.show', compact('post'));
+
+});
+
+
+// create show blade
+    
+<hr>{{$post->post_title}}</hr><br>
+{{$post->post_content}}
+
+/*****************************************************************
+/ a controller receives requests from the router, requests data  
+/ from the model, massages/composes data to be sent to view for 
+/ rendering
+/*****************************************************************
+
+// add controller for Post
+
+php artisan make:controller PostsController
+
+// add index and show controllers to PostsController. Also, use App\Post;
+
+use App\Post;
+
+Public function index()
+    {
+
+    	 $posts = Post::all();
+
+    	/*dd($posts);*/
+
+    	return view('posts.index', compact('posts'));
+
+    }
+
+    Public function show($id)
+    {
+
+    	$post = Post::find($id);
+	
+
+    	return view('posts.show', compact('post'));
+
+    }
+
+// add calls to controller to web.php
+
+Route::get('/posts', 'PostsController@index');
+Route::get('/posts/{post}', 'PostsController@show');
+
+/***********************************************************************
+/
+/
+/
+/***********************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

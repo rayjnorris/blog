@@ -1,0 +1,38 @@
+
+
+.brand-logo
+{
+}
+
+.posts-div
+{
+    padding-left: 2.5%;
+}
+
+.page-container
+{
+    max-width: 1280px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav
+{
+}
+
+.hero
+{
+    background: transparent;
+}
+
+.section-title
+{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.46);
+    margin-top: -15px;
+    background-color: rgba(0, 0, 0, 0.09);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+

@@ -1,0 +1,180 @@
+
+
+/* CORPORATE TEMPLATE STYLES */
+
+body
+{
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+}
+
+main
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.navbar-color
+{
+    background-color: #B8312F;
+}
+
+footer.page-footer
+{
+    background-color: #B8312F;
+    margin-top: 0px;
+}
+
+.section img{
+
+  box-shadow: none;
+}
+
+.section hr
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top-color: #B8312F;
+}
+
+.hr-red
+{
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    height: 1px;
+    background: #B8312F;
+}
+
+.card-flat {
+  /*border: solid 1px #B8312F;*/
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*border: 1px solid rgba(0, 0, 0, 0.125);*/
+
+  border-radius: 0.25rem;
+  margin-bottom: 30px;
+}
+
+.navbar-brand
+{
+    padding-bottom: 0rem;
+    padding-right: 1rem;
+    padding-top: 8px;
+}
+
+.float-right
+{
+    float: right;
+    display: inline-block;
+}
+
+.section-background
+{
+    background-color: transparent;
+    color: #939393;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+.section
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.section-gray
+{
+    background-color: #cbcbcb;
+    padding: 30px;
+}
+
+.post_attributes
+{
+  display: block;
+
+}
+
+.post_date_label
+{
+    font-size: .9rem;
+    font-style: italic;
+    line-height: 1rem;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.post_date
+{
+    font-size: .9rem;
+    line-height: 1rem;
+    padding-right: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.post_author_label
+{
+    font-size: .9rem;
+    font-style: italic;
+    line-height: 1rem;
+    margin-left: 15px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
+.post_author
+{
+    font-size: .9rem;
+    line-height: 1rem;
+    padding-right: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.featured_post_summary
+{
+    margin-right: 15px;
+}
+
+.waves-button-input
+{
+    padding: 0px;
+}
+
+.btn
+{
+    margin-left: 0px;
+}
+
+
+
+.copyright-bar
+{
+    background-color: #282828;
+    color: #b3b3b3;
+    padding-top: 10px;
+}
+
+.md-form label
+{
+  color: #aaaaaa;
+}
+
+.md-form label.active 
+{
+  color: #B8312F;
+}
+
+.popover-title{
+
+  margin-bottom: 30px;
+}

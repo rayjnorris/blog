@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" wp-site wp-site-is-master-page>
+    <!-- head section -->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>@yield('title') | Our Universe</title>
+        <!-- Favicons-->
+        <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+        <meta name="msapplication-TileColor" content="#FFFFFF">
+        <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+        <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32">
+        <title>Universe Blog </title>
+        <!-- FONTS -->
+        <!--FONT AWESOME -->
+        <!-- BOOTSRAP -->
+        <!-- PARSLEY -->
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="public/vendors/parsley/css/parsley.css" rel="stylesheet" type="text/css">
+        <!--<link href="public/vendors/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">-->
+        <link href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled.min.css" rel="stylesheet">
+        <link href="public/vendors/mdb/css/mdb.css" rel="stylesheet" type="text/css">
+        <link href="public/css/style.css" rel="stylesheet" type="text/css">
+        <style>
+            header, main, footer
+{
+    padding-left: 240px;
+}
+
+
+@media only screen and (max-width : 992px)
+{
+    header, main, footer
+    {
+        padding-left: 0;
+    }
+}
+
+
+</style>
+    </head>
+    <body class="fixed-sn white-skin">
+        <header>
+            <!-- SideNav slide-out button -->
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+            <!--/. SideNav slide-out button -->
+            <!-- Sidebar navigation -->
+            <ul id="slide-out" class="side-nav fixed sn-bg-2 custom-scrollbar">
+                <!-- Logo -->
+                <li>
+                    <div class="logo-wrapper waves-light">
+                        <a href="#">
+                            <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center">
+                        </a>
+                    </div>
+                </li>
+                <!--/. Logo -->
+                <!--Social-->
+                <li>
+                    <ul class="social">
+                        <li>
+                            <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                        </li>
+                        <li>
+                            <a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a>
+                        </li>
+                        <li>
+                            <a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>
+                        </li>
+                        <li>
+                            <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+                        </li>
+                    </ul>
+                </li>
+                <!--/Social-->
+                <!--Search Form-->
+                <li>
+                    <form class="search-form" role="search">
+                        <div class="form-group waves-light">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                    </form>
+                </li>
+                <!--/.Search Form-->
+                <!-- Side navigation links -->
+                <li>
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r"><i class="fa fa-chevron-right"></i> Submit blog<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect">Submit listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect">Registration form</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r"><i class="fa fa-hand-pointer-o"></i> Instruction<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect">For bloggers</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect">For authors</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r"><i class="fa fa-eye"></i> About<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect">Introduction</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect">Monthly meetings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a class="collapsible-header waves-effect arrow-r"><i class="fa fa-envelope-o"></i> Contact me<i class="fa fa-angle-down rotate-icon"></i></a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="waves-effect">FAQ</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="waves-effect">Write a message</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <!--/. Side navigation links -->
+                <div class="sidenav-bg mask-strong"></div>
+            </ul>
+            <!--/. Sidebar navigation -->
+        </header>
+        <div class="container">
+            <main>
+                <section id="SECTION1">
+                    <div class="row wow fadeIn" data-wow-delay="0.2s">
+                        <div class="col-lg-7">
+                            <!--Featured image -->
+                            <div class="view overlay hm-white-light z-depth-1-half">
+                                <img src="http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/Leopard-tree.jpg.adapt.945.1.jpg" class="img-fluid " alt="">
+                                <div class="mask">
+</div>
+                            </div>
+                            <br>
+                        </div>
+                        <!--Main information-->
+                        <div class="col-lg-5">
+                            <h2 class="h2-responsive">Leopards in the Wild</h2>
+                            <hr>
+                            <div> 
+                                <p><b>The leopard (Panthera pardus)</b> /ˈlɛpərd/ is one of the five "big cats" in the genus Panthera. It is a member of the family Felidae with a wide range in sub-Saharan Africa and parts of Asia. &nbsp;Fossil records suggest that in the Late Pleistocene it occurred in Europe and Japan.</p>
+                            </div>
+                            <a href="" class="btn btn-danger">READ MORE</a>
+                        </div>
+                    </div>
+                    <hr class="extra-margins">
+                    <div class="row">
+                        <!--First columnn-->
+                        <div class="col-lg-4">
+                            <!--Card-->
+                            <div class="card wow fadeIn card-flat" data-wow-delay="0.4s">
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="http://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20(37).jpg" class="img-fluid" alt="">
+                                    <a href="#">
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--/.Card image-->
+                                <!--Card content-->
+                                <div class="card-block">
+                                    <!--Title-->
+                                    <h4 class="card-title">Card title</h4>
+                                    <!--Text-->
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-info">Read more</a>
+                                </div>
+                                <!--/.Card content-->
+                            </div>
+                            <!--/.Card-->
+                        </div>
+                        <!--First columnn-->
+                        <!--Second columnn-->
+                        <div class="col-lg-4">
+                            <!--Card-->
+                            <div class="card wow fadeIn card-flat" data-wow-delay="0.6s">
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="http://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20(21).jpg" class="img-fluid" alt="">
+                                    <a href="#">
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--/.Card image-->
+                                <!--Card content-->
+                                <div class="card-block">
+                                    <!--Title-->
+                                    <h4 class="card-title">Card title</h4>
+                                    <!--Text-->
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-info">Read more</a>
+                                </div>
+                                <!--/.Card content-->
+                            </div>
+                            <!--/.Card-->
+                        </div>
+                        <!--Second columnn-->
+                        <!--Third columnn-->
+                        <div class="col-lg-4">
+                            <!--Card-->
+                            <div class="card wow fadeIn card-flat" data-wow-delay="0.8s">
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="http://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20(12).jpg" class="img-fluid" alt="">
+                                    <a href="#">
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--/.Card image-->
+                                <!--Card content-->
+                                <div class="card-block">
+                                    <!--Title-->
+                                    <h4 class="card-title">Card title</h4>
+                                    <!--Text-->
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="btn btn-info">Read more</a>
+                                </div>
+                                <!--/.Card content-->
+                            </div>
+                            <!--/.Card-->
+                        </div>
+                        <!--Third columnn-->
+                    </div>
+                </section>
+                <section id="SECTION2" class="section extra-margins">
+                    <h1 class="section-heading">Section title</h1>
+                    <p class="section-description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="row">
+                        <!--First column-->
+                        <div class="col-md-5 mb-r">
+                            <!--Featured image-->
+                            <div class="view overlay hm-white-slight">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20(93).jpg" alt="First sample image">
+                                <a>
+                                    <div class="mask waves-effect waves-light"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/First column-->
+                        <!--Second column-->
+                        <div class="col-md-7 mb-r">
+                            <!--Excerpt-->
+                            <a href="" class="pink-text"><h5><i class="fa fa-heart"></i>Lifestyle</h5></a>
+                            <h4>Interpersonal communication - what is your style?</h4>
+                            <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus et aut officiis debitis aut rerum.</p>
+                            <p>by <a><strong>Jessica Clark</strong></a>, 26/08/2016</p>
+                            <a class="btn btn-primary">Read more</a>
+                        </div>
+                        <!--/Second column-->
+                    </div>
+                    <hr class="hr-mobile">
+                    <div class="row">
+                        <!--First column-->
+                        <div class="col-md-5 mb-r">
+                            <!--Featured image-->
+                            <div class="view overlay hm-white-slight">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Food/6-col/img%20(14).jpg" alt="Second sample image">
+                                <a>
+                                    <div class="mask waves-effect waves-light"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/First column-->
+                        <!--Second column-->
+                        <div class="col-md-7 mb-r">
+                            <!--Excerpt-->
+                            <a href="" class="light-green-text"><h5><i class="fa fa-plane"></i>Travels</h5></a>
+                            <h4>Food culture - explore the rituals of eating in the world.</h4>
+                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident et dolorum fuga.</p>
+                            <p>by <a><strong>Jessica Clark</strong></a>, 24/08/2016</p>
+                            <a class="btn btn-primary">Read more</a>
+                        </div>
+                        <!--/Second column-->
+                    </div>
+                    <hr class="hr-mobile">
+                    <div class="row">
+                        <!--First column-->
+                        <div class="col-md-5 mb-r">
+                            <!--Featured image-->
+                            <div class="view overlay hm-white-slight">
+                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/6-col/img%20(78).jpg" alt="Third sample image">
+                                <a>
+                                    <div class="mask waves-effect waves-light"></div>
+                                </a>
+                            </div>
+                        </div>
+                        <!--/First column-->
+                        <!--Second column-->
+                        <div class="col-md-7 mb-r">
+                            <!--Excerpt-->
+                            <a href="" class="light-blue-text"><h5><i class="fa fa-camera"></i>Photography</h5></a>
+                            <h4>10 tips on how to photograph the lake.</h4>
+                            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.</p>
+                            <p>by <a><strong>Jessica Clark</strong></a>, 21/08/2016</p>
+                            <a class="btn btn-primary">Read more</a>
+                        </div>
+                        <!--/Second column-->
+                    </div>
+                    <hr class="hr-no-margin" />
+                    <!--Section heading-->
+                    <!--Section sescription-->
+                    <!--First row-->
+                    <!--/First row-->
+                    <!--Second row-->
+                    <!--/Second row-->
+                    <!--Third row-->
+                    <!--/Third row-->
+                </section>
+                <section id="SECTION4">
+                    <div class="content-block blog-1">
+                        <div class="container text-center">
+                            <div class="underlined-title">
+                                <h1 class="text-light">Our Blog</h1>
+                                <hr>
+                                <h2>The latest news & posts</h2>
+                            </div>
+                            <!-- /.col-sm-10 -->
+                        </div>
+                        <div class="container">
+                            <section id="blog-posts" class="blog-posts-container">
+                                <div>
+                                    <div class="row post-heading-container">
+                                        <h2 class="post-title">Post Title</h2>
+                                        <div class="row post_attributes">
+                                            <p class="post_published_label">Published: </p>
+                                            <p class="post_published_date">2017-04-26</p>
+                                            <p class="post_author_label">Author: </p>
+                                            <p class="post_author">Ray J. Norris</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <p class="post_content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>
+                                </div>                                 
+                            </section>
+                            <div>
+                                <div class="col-md-5 card">
+                                    <div class="card-image-container">
+                                        <img class="card-image" src="http://www.defenders.org/sites/default/files/styles/large/public/leopard-eric-gurwin-dpc.jpg">
+                                    </div>
+                                    <div class="card-block">
+                                        <h2 class="card-title">Post Title</h2>
+                                        <div class="card-text card-hr">
+                                            <p class="post_published_label">Published: </p>
+                                            <p class="post_published_date">2017-04-26</p>
+                                            <p class="post_author_label">Author: </p>
+                                            <p class="post_author">Ray J. Norris</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>                                     
+                                </div>
+                                <div class="col-md-5 col-md-offset-2 card">
+                                    <div class="card-image-container">
+                                        <img class="card-image" src="http://images.nationalgeographic.com/wpf/media-live/photos/000/004/cache/cheetah_492_600x450.jpg">
+                                    </div>
+                                    <div class="card-block">
+                                        <h2 class="card-title">Post Title</h2>
+                                        <div class=" card-text card-hr">
+                                            <p class="post_published_label">Published: </p>
+                                            <p class="post_published_date">2017-04-26</p>
+                                            <p class="post_author_label">Author: </p>
+                                            <p class="post_author">Ray J. Norris</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-text">
+                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    </div>                                     
+                                </div>
+                            </div>
+                            <!-- hero section -->
+                            <!-- main content -->
+                            <!-- footer section -->
+                        </div>
+                        <!-- /.container -->
+                    </div>
+                </section>
+                <!--Main layout-->
+                <!--/.Main layout-->
+            </main>
+        </div>
+        <!--/Section: Blog v.3-->
+        <!-- nav section -->
+        <!-- start main section -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Column title</h3> 
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                    </div>
+                    <div class="col-md-4"> 
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p> 
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="copyright-bar copyright-row">
+            <div class="row">
+                <div class="container">
+                    <div class="col-md-6">
+                        <p class="text-small text-light">You can also call <a href="tel:+1913522-3611" title="Call us" class="text-normal">+1 (913) 522-3611</a> or <a class="text-normal" target="_top" title="Send Mail" href="mailto:ray@rayjnorris.com">email us</a>.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-small text-light pull-right">All right reserved &copy; 2017 Ray J. Norris</p>
+                    </div>
+                </div>
+            </div>
+        </div>         
+        <!-- end main content -->
+        <!-- scripts -->
+        <script src="index.js"></script>
+        <script src="./public/js/jquery-3.2.1.js"></script>
+        <!-- BOOTSRAP -->         
+        <script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/compiled.min.js"></script>         
+        <!--<script src="./public/vendors/bootstrap/js/bootstrap.min.js"></script>-->
+        <script src="./public/vendors/mdb/js/mdb.min.js"></script>
+        <script src="./public/vendors/mdb/js/tether.min.js"></script>
+        <!-- PARSLEY -->         
+        <script src="./public/vendors/parsley/js/parsley.min.js"></script>
+        <!-- PICKADATE -->
+        <script src="./public/vendors/pickadate/picker.date.js"></script>
+        <script src="./public/vendors/pickadate/picker.js"></script>
+        <script src="./public/vendors/pickadate/legacy.js"></script>
+        <script type="text/javascript">
+
+  $(function() {
+    $('#datepicker').pickadate({
+        formatSubmit: 'yyyy-mm-dd',
+        hiddenName: true,
+        format: 'yyyy-mm-dd',
+      editable: undefined
+    })
+  });
+</script>
+        <!-- slider JavaScript  -->
+        <script>
+    $(document).ready(function(){
+      $('.slider').slider({
+        full_width: false,
+        interval:10000,
+        transition:1000
+        });
+    });
+</script>
+        <script>
+    new WOW().init();
+</script>
+        <script>
+    $(".button-collapse").sideNav();
+        
+    var el = document.querySelector('.custom-scrollbar');
+    Ps.initialize(el);
+</script>
+    </body>
+</html>
